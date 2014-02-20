@@ -38,6 +38,7 @@ add_action( 'template_redirect', 'qk_quoteme_show' );
 //add_action( 'template_redirect', 'my_page_template_redirect' );
 add_action('admin_menu', 'qk_quoteme_admin_menu');
 
+define('QK_QUOTEME_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 /**
  * Quotes
  *
@@ -48,10 +49,10 @@ add_action('admin_menu', 'qk_quoteme_admin_menu');
  */
 function qk_quoteme_all() {
 	
-		return $quotes = array( 1=>array("body"=>"This is the quote1", "author"=>"Quincy Kwende", "date"=>"12 Feb 2014"), 
-					 2=>array("body"=>"This is the quote2", "author"=>"Nara Laurence", "date"=>"19 May 2014"),
-					 3=>array("body"=>"This is the quote3", "author"=>"Absalom Shu", "date"=>"23 April 2014"),
-					 4=>array("body"=>"This is the quote4", "author"=>"Julie Mojoko", "date"=>"03 September 2014"),
+		return $quotes = array( 1=>array("body"=>"People eat meat and think they will become as strong as an ox, forgetting that the ox eats grass.", "author"=>"Pino Caruso", "date"=>"12 Feb 2014"), 
+					 2=>array("body"=>"Nothing will benefit human health and increase the chances for survival of life on Earth as much as the evolution to a vegetarian diet.", "author"=>"Albert Einstein", "date"=>"19 May 2014"),
+					 3=>array("body"=>"If you don't want to be beaten, imprisoned, mutilated, killed or tortured then you shouldn't condone such behaviour towards anyone, be they human or not.", "author"=>"Moby", "date"=>"23 April 2014"),
+					 4=>array("body"=>"My body will not be a tomb for other creatures.", "author"=>"Leonardo Da Vinci", "date"=>"03 September 2014"),
 			  );
 }
 

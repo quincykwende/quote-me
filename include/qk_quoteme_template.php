@@ -30,4 +30,10 @@ function qk_quoteme_template()
 }
 */
 
+function qk_quoteme_template()
+{
+	include("qk_quoteme_template_content.php");
+	//echo "dffd";
+	exit;
+}
 

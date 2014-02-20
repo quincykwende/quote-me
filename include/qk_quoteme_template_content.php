@@ -10,9 +10,9 @@
 		<meta name="keywords" content="quotes rotator, content rotator, jquery, javascript, fade in, fade out, css3, component, html, web development, blockquote" />
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/default.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<script src="js/modernizr.custom.js"></script>
+		<link rel="stylesheet" type="text/css" href="<?php echo QK_QUOTEME_PLUGIN_URL ?>assets/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo QK_QUOTEME_PLUGIN_URL ?>assets/css/component.css" />
+		<script src="<?php echo QK_QUOTEME_PLUGIN_URL ?>assets/js/modernizr.custom.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -20,7 +20,7 @@
 			<div class="main">
 				<div id="cbp-qtrotator" class="cbp-qtrotator">
 					<div class="cbp-qtcontent">
-						<img src="images/1.jpg" alt="img01" />
+						<img src="<?php echo QK_QUOTEME_PLUGIN_URL ?>assets/images/1.jpg" alt="img01" />
 						<blockquote>
 						  <p>People eat meat and think they will become as strong as an ox, forgetting that the ox eats grass.</p>
 						  <footer>Pino Caruso</footer>
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/jquery.cbpQTRotator.min.js"></script>
+		<script src="<?php echo QK_QUOTEME_PLUGIN_URL ?>assets/js/jquery.cbpQTRotator.min.js"></script>
 		<script>
 			$( function() {
 				/*
