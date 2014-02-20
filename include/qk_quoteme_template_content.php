@@ -28,6 +28,13 @@
 						</blockquote>
 					</div>
 					<?php endforeach; ?>
+					
+				</div>
+				
+				<div class="opt-out">
+						<a href="<?php echo $_SERVER['PHP_SELF']; ?>"> 
+						Opt out 
+						</a>
 				</div>
 			</div>
 		</div>

@@ -3,7 +3,6 @@
 	margin: 3em auto 5em auto;
 	max-width: 800px;
 	width: 100%;
-	min-height: 400px;
 }
 
 .cbp-qtrotator .cbp-qtcontent {
@@ -86,3 +85,5 @@
 	}
 
 }
+.opt-out{text-align:center;font-size: 1.5em; }
+.opt-out a{color:#47a3da;}
