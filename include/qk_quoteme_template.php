@@ -32,6 +32,10 @@ function qk_quoteme_template()
 
 function qk_quoteme_template()
 {
+	//get all quotes
+	
+	$quotes = qk_quoteme_all();
+	
 	include("qk_quoteme_template_content.php");
 	//echo "dffd";
 	exit;
