@@ -32,11 +32,23 @@ function qk_quoteme_template()
 
 function qk_quoteme_template()
 {
-	//get all quotes
-	$quotes = qk_quoteme_all();
+	if (!session_id())
+	{
+		session_start();
+	}
 	
-	include("qk_quoteme_template_content.php");
-	//echo "dffd";
-	exit;
+	if( !isset($_SESSION['qk_quoteme_opt_out']) )
+	{
+		
+		$_SESSION['qk_quoteme_opt_out'] = "qk_quoteme_opt_out";
+		
+		//get all quotes
+		$quotes = qk_quoteme_all();
+	
+		include("qk_quoteme_template_content.php");
+		
+		exit;
+	}
+	
 }
 
