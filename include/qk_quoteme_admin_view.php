@@ -1,8 +1,9 @@
 <link rel="stylesheet" type="text/css" href="<?php echo QK_QUOTEME_PLUGIN_URL ?>assets/css/admin.css" />
 <div class="wrap">
+	
 	<h2>
 		<?php echo QK_QUOTEME_NAME; ?>
-		<a href="<?php echo $_SERVER['PHP_SELF']; ?>?page=qk_quoteme_add" class="add-new-h2">Add New</a>
+		<a href="<?php echo $_SERVER['PHP_SELF']; ?>?page=qk_quoteme_action&new=1" class="add-new-h2">Add New</a>
 	</h2>
 	<?php
 		if(isset($_GET['delete']))
@@ -42,7 +43,7 @@
 					</span>
 					<div class="row-actions">
 						<span class="edit">
-							<a href="#" title="Edit this quote">Edit</a> | 
+							<a href="<?php echo $_SERVER['PHP_SELF']; ?>?page=qk_quoteme_action&edit=<?php echo $quote->id; ?>" title="Edit this quote">Edit</a> | 
 						</span>
 						<span class="trash">
 							<a class="submitdelete" title="Delete this quote" href="<?php echo $_SERVER['PHP_SELF']; ?>?page=quote-me/include/qk_quoteme_admin.php&delete=<?php echo $quote->id; ?>">Delete</a> | 
@@ -57,6 +58,6 @@
 	</thead>	
 	</table>
 	<h2>
-		<a href="<?php echo $_SERVER['PHP_SELF']; ?>?page=qk_quoteme_add" class="add-new-h2">Add New Quote</a>
+		<a href="<?php echo $_SERVER['PHP_SELF']; ?>?page=qk_quoteme_action&new=1" class="add-new-h2">Add New Quote</a>
 	</h2>
 </div>
