@@ -27,7 +27,7 @@ function qk_quoteme_admin(){
 	
 	$quotes = qk_quoteme_all();
 	
-	include("qk_quoteme_admin_template.php");
+	include("qk_quoteme_admin_view.php");
 	
 	//var_dump($quotes);
 }
@@ -36,23 +36,10 @@ function qk_quoteme_admin(){
  * Help
  *
  * Help page of plugin
- *
- * @return string
- *
  */
 function qk_quoteme_help(){
-	echo "help page";
-}
-
-
-/**
- * Quote Analytics
- *
- * Keep track of quote analytics (visits, countries visited from, average time on quote)
- *
- */
-function qk_quoteme_analytics(){
-	echo "analytics";
+	
+	include("qk_quoteme_admin_help_view.php");
 }
 
 
@@ -61,12 +48,11 @@ function qk_quoteme_analytics(){
  *
  * Add a new quote to a db
  *
- * @global object $post The post object
- * @return integer $new_views The number of views the post has
  *
  */
 function qk_quoteme_add(){
-	echo "add quote";
+	
+	include("qk_quoteme_admin_add_view.php");
 } 
 
 
@@ -74,10 +60,8 @@ function qk_quoteme_add(){
  * Modify a quote
  *
  *
- * @global object $post The post object
- * @return integer $new_views The number of views the post has
- *
  */
 function qk_quoteme_edit(){
-	echo "edit quote";
+	
+	include("qk_quoteme_admin_edit_view.php");
 }

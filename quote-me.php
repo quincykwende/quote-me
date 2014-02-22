@@ -53,7 +53,7 @@ add_action('admin_menu', 'qk_quoteme_admin_menu');
  *
  * Return all quotes
  *
- * @return array $quotes 
+ * @return object $quotes 
  *
  */
 function qk_quoteme_all() {
@@ -83,13 +83,7 @@ function qk_quoteme_all() {
  */
  function qk_quoteme_get() {
 	
-	$quotes = qk_quoteme_all();
-	
-	//randomly get a quote id
-	$quote_id = mt_rand(1, count($quotes));
-	
-	//return quote array
-	return $quotes[$quote_id];	
+
 }
  
 /**
@@ -97,14 +91,10 @@ function qk_quoteme_all() {
  *
  * Upon landing on site for the first i.e without session data display quote
  *
- * @global object $post The post object
- * @return integer $new_views The number of views the post has
  *
  */
 function qk_quoteme_show(){
 	
-	// wp_redirect( home_url( '/signup/' ) );
-    //    exit();
 	echo qk_quoteme_template();
 
 }
