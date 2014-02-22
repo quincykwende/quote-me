@@ -18,8 +18,8 @@
 					<div class="cbp-qtcontent">
 						<img src="<?php echo QK_QUOTEME_PLUGIN_URL ?>assets/images/1.jpg" alt="img01" />
 						<blockquote>
-						  <p><?php echo $quote["body"]; ?></p>
-						  <footer><?php echo $quote["author"]; ?></footer>
+						  <p><?php echo $quote->quote; ?></p>
+						  <footer><?php echo $quote->author; ?></footer>
 						</blockquote>
 					</div>
 					<?php endforeach; ?>
