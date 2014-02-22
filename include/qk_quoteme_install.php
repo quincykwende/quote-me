@@ -1,12 +1,13 @@
 <?php
+
+
+global $qk_quoteme_version;
+$qk_quoteme_version = QK_QUOTEME_VERSION;
+
 /**
  * Creates Database Table for plugin
  *
  */
-
-global $qk_quoteme_version;
-$qk_quoteme_version = QK_QUOTEME_VERSION;
- 
 function qk_quoteme_install_db () {
    
 	global $wpdb;

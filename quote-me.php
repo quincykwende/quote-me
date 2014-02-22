@@ -47,6 +47,10 @@ register_activation_hook( __FILE__, 'qk_quoteme_install_db_data');
 add_action( 'template_redirect', 'qk_quoteme_show' );
 add_action('admin_menu', 'qk_quoteme_admin_menu');
 
+//global $wpdb;
+
+//$table_name = $wpdb->prefix . "qk_quoteme"; 
+
 
 /**
  * Quotes

@@ -65,3 +65,19 @@ function qk_quoteme_edit(){
 	
 	include("qk_quoteme_edit_view.php");
 }
+
+/**
+ * Delete a quote
+ *
+ */
+function qk_quoteme_delete($quote_id){
+
+	global $wpdb;
+
+	$table_name = $wpdb->prefix . "qk_quoteme"; 
+	
+	$wpdb->delete( 	$table_name,  array( 'id' => $quote_id ) );
+	
+	echo $_SERVER['PHP_SELF'];
+	
+}
