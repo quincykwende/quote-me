@@ -11,7 +11,7 @@ function qk_quoteme_admin_menu(){
 	if (function_exists('add_menu_page'))
 	{
 		add_menu_page('Quote me', 'Quote me', 10, __FILE__, 'qk_quoteme_admin');
-		add_submenu_page(__FILE__, 'Analytics', 'Analytics', 10, 'qk_quoteme_analytics', 'qk_quoteme_analytics');
+		add_submenu_page(__FILE__, 'Add New', 'Add New', 10, 'qk_quoteme_add', 'qk_quoteme_add');
 		add_submenu_page(__FILE__, 'Help', 'Help', 10, 'qk_quoteme_help', 'qk_quoteme_help');
 	}
 }
@@ -39,7 +39,7 @@ function qk_quoteme_admin(){
  */
 function qk_quoteme_help(){
 	
-	include("qk_quoteme_admin_help_view.php");
+	include("qk_quoteme_help_view.php");
 }
 
 
@@ -52,7 +52,7 @@ function qk_quoteme_help(){
  */
 function qk_quoteme_add(){
 	
-	include("qk_quoteme_admin_add_view.php");
+	include("qk_quoteme_add_view.php");
 } 
 
 
@@ -63,5 +63,5 @@ function qk_quoteme_add(){
  */
 function qk_quoteme_edit(){
 	
-	include("qk_quoteme_admin_edit_view.php");
+	include("qk_quoteme_edit_view.php");
 }
