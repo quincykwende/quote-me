@@ -16,7 +16,6 @@
 				<div id="cbp-qtrotator" class="cbp-qtrotator">
 					<?php foreach($quotes as $quote): ?>
 					<div class="cbp-qtcontent">
-						<img src="<?php echo QK_QUOTEME_PLUGIN_URL ?>assets/images/1.jpg" alt="img01" />
 						<blockquote>
 						  <p><?php echo $quote->quote; ?></p>
 						  <footer><?php echo $quote->author; ?></footer>
