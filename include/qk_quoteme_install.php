@@ -19,6 +19,7 @@ function qk_quoteme_install_db () {
 			author tinytext NOT NULL,
 			create_date int(11) NOT NULL,
 			actual_date int(11) NOT NULL,
+			state tinyint(1) DEFAULT 1,
 			UNIQUE KEY id (id)
 			);";
 
@@ -49,6 +50,6 @@ function qk_quoteme_install_db_data () {
 	$wpdb->insert( $table_name,  $value_1);
 	$wpdb->insert( $table_name,  $value_2);
 	$wpdb->insert( $table_name,  $value_3);
-	$wpdb->insert( $table_name,  $value_1);
+	$wpdb->insert( $table_name,  $value_4);
 }
 	

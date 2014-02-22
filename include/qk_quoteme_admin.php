@@ -25,8 +25,11 @@ function qk_quoteme_admin_menu(){
  */
 function qk_quoteme_admin(){
 	
-	echo "_admin";
-
+	$quotes = qk_quoteme_all();
+	
+	include("qk_quoteme_admin_template.php");
+	
+	//var_dump($quotes);
 }
 
 /**
