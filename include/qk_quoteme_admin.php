@@ -25,7 +25,7 @@ function qk_quoteme_admin_menu(){
  */
 function qk_quoteme_admin(){
 	
-	$quotes = qk_quoteme_all();
+	//$quotes = qk_quoteme_all();
 	
 	include("qk_quoteme_admin_view.php");
 	

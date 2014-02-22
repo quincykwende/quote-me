@@ -10,9 +10,9 @@
 		{
 			qk_quoteme_delete($_GET['delete']);
 			
-			//redirect upon successful delete
-			wp_redirect($_SERVER['PHP_SELF']."?page=quote-me/include/qk_quoteme_admin.php");
 		}
+		
+		$quotes = qk_quoteme_all();
 	?>
 	<table class="qk-quote-table" cellspacing="0">
 	<thead>
