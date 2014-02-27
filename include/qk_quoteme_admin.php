@@ -83,6 +83,6 @@ function qk_quoteme_delete($quote_id){
 	
 	$wpdb->delete( 	$table_name,  array( 'id' => $quote_id ) );
 	
-	echo $_SERVER['PHP_SELF'];
+	//echo $_SERVER['PHP_SELF'];
 	
 }

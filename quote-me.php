@@ -10,7 +10,7 @@
  * Description: A brief description of the Plugin.
  * Version: 1.0
  * Author: Quincy Kwende
- * Author URI: http://URI_Of_The_Plugin_Author
+ * Author URI: http://www.quincykwende.wordpress.com
  * License: GPL2
  */
  
