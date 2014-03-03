@@ -10,4 +10,4 @@
 	
 	$results = $wpdb->query( $sql );
 	
-	delete_option('qk_quoteme_version');
+	delete_option( 'qk_quoteme_version' );

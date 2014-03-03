@@ -6,7 +6,7 @@
 		<a href="<?php echo $_SERVER['PHP_SELF']; ?>?page=qk_quoteme_action&new=1" class="add-new-h2">Add New</a>
 	</h2>
 	<?php
-		if(isset($_GET['delete']))
+		if( isset($_GET['delete']) )
 		{
 			qk_quoteme_delete($_GET['delete']);
 			
@@ -23,7 +23,7 @@
 		</tr>
 		<?php 
 			$i = 1;
-			foreach($quotes as $quote):
+			foreach( $quotes as $quote ):
 				if(($i % 2) == 0)
 				{
 					$class = '';

@@ -37,7 +37,7 @@ function qk_quoteme_template()
 		session_start();
 	}
 	
-	if( !isset($_SESSION['qk_quoteme_opt_out']) )
+	if( !isset( $_SESSION['qk_quoteme_opt_out'] ) )
 	{
 		
 		$_SESSION['qk_quoteme_opt_out'] = "qk_quoteme_opt_out";

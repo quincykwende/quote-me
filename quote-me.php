@@ -31,21 +31,21 @@
 */
 
 //include files
-include("include/qk_quoteme_template.php");
-include("include/qk_quoteme_install.php");
-include("include/qk_quoteme_admin.php");
+include( "include/qk_quoteme_template.php" );
+include( "include/qk_quoteme_install.php" );
+include( "include/qk_quoteme_admin.php" );
 
-define('QK_QUOTEME_PLUGIN_URL', plugin_dir_url( __FILE__ ));
-define('QK_QUOTEME_VERSION', 1.0);
-define('QK_QUOTEME_NAME', "Quote me");
+define( 'QK_QUOTEME_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'QK_QUOTEME_VERSION', 1.0 );
+define( 'QK_QUOTEME_NAME', "Quote me" );
 
 //activate
-register_activation_hook( __FILE__, 'qk_quoteme_install_db');
-register_activation_hook( __FILE__, 'qk_quoteme_install_db_data');
+register_activation_hook( __FILE__, 'qk_quoteme_install_db' );
+register_activation_hook( __FILE__, 'qk_quoteme_install_db_data' );
 
 //actions
 add_action( 'template_redirect', 'qk_quoteme_show' );
-add_action('admin_menu', 'qk_quoteme_admin_menu');
+add_action( 'admin_menu', 'qk_quoteme_admin_menu' );
 
 //global $wpdb;
 

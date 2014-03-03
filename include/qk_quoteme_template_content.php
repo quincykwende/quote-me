@@ -14,7 +14,7 @@
 			
 			<div class="main">
 				<div id="cbp-qtrotator" class="cbp-qtrotator">
-					<?php foreach($quotes as $quote): ?>
+					<?php foreach( $quotes as $quote ): ?>
 					<div class="cbp-qtcontent">
 						<blockquote>
 						  <p><?php echo $quote->quote; ?></p>
