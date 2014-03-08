@@ -6,7 +6,7 @@
  
 /**
  * Plugin Name: Quote me
- * Plugin URI: http://wordpress.org/plugins/quote-me/
+ * Plugin URI: https://github.com/quincykwende/quote-me
  * Description: A brief description of the Plugin.
  * Version: 1.0
  * Author: Quincy Kwende
@@ -46,10 +46,6 @@ register_activation_hook( __FILE__, 'qk_quoteme_install_db_data' );
 //actions
 add_action( 'template_redirect', 'qk_quoteme_show' );
 add_action( 'admin_menu', 'qk_quoteme_admin_menu' );
-
-//global $wpdb;
-
-//$table_name = $wpdb->prefix . "qk_quoteme"; 
 
 
 /**
