@@ -47,7 +47,8 @@ function qk_quoteme_install_db_data () {
 				array( 'quote' => 'People eat meat and think they will become as strong as an ox, forgetting that the ox eats grass.', 'author' => 'Pino Caruso', 'create_date' => $current_time ),
 				array( 'quote' => 'Nothing will benefit human health and increase the chances for survival of life on Earth as much as the evolution to a vegetarian diet.', 'author' => 'Albert Einstein', 'create_date' => $current_time ),
 				array( 'quote' => 'If you don\'t want to be beaten, imprisoned, mutilated, killed or tortured then you shouldn\'t condone such behaviour towards anyone, be they human or not.', 'author' => 'Moby', 'create_date' => $current_time ),
-				array( 'quote' => 'My body will not be a tomb for other creatures.', 'author' => 'Leonardo Da Vinci', 'create_date' => $current_time )
+				array( 'quote' => 'My body will not be a tomb for other creatures.', 'author' => 'Leonardo Da Vinci', 'create_date' => $current_time ),
+				array( 'quote' => 'Code is Poetry.', 'author' => 'WordPress', 'create_date' => $current_time )
 			   );
     //insert sample data
     foreach( $quotes as $quote )
