@@ -1,3 +1,3 @@
-$( function() {
-	$( '#cbp-qtrotator' ).cbpQTRotator();
+jQuery( function() {
+	jQuery( '#cbp-qtrotator' ).cbpQTRotator();
 } );

@@ -35,8 +35,7 @@ function qk_quoteme_template()
 //js
 function qk_quotme_scripts()
 {
-	//wp_deregister_script( 'jquery' );
-	wp_enqueue_script( 'jquery.min.1.9.1',  QK_QUOTEME_PLUGIN_URL.'assets/js/jquery.min.1.9.1.js', array(), '1.9.1',TRUE); 
+	wp_enqueue_script( 'jquery' ); 
 	wp_enqueue_script( 'modernizr.custom', QK_QUOTEME_PLUGIN_URL.'assets/js/modernizr.custom.js', array(), '1.0.0', TRUE ); 
 	wp_enqueue_script( 'jquery.cbpQTRotator', QK_QUOTEME_PLUGIN_URL.'assets/js/jquery.cbpQTRotator.min.js', array(), '2.6.2', TRUE ); 
 	wp_enqueue_script( 'rotator.init', QK_QUOTEME_PLUGIN_URL.'assets/js/rotator.init.js', array('jquery.cbpQTRotator'), '1.0.0', TRUE ); 
