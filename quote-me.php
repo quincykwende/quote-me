@@ -7,7 +7,7 @@
 /**
  * Plugin Name: Quote me
  * Plugin URI: https://github.com/quincykwende/quote-me
- * Description: This plugin adds a quote rotator to your site. Your users would see this quote rotator before any content during their first visit and they can click to opt out/continue
+ * Description: This plugin adds a jQuery Quote Rotator to a site. Users would see this Quote Rotator before any content during their first visit and they can click to opt out/continue
  * Version: 1.0
  * Author: Quincy Kwende
  * Author URI: http://www.quincykwende.wordpress.com
