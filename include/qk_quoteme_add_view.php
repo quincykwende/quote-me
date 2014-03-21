@@ -10,29 +10,29 @@
 	</h2>
 	<?php 
 	
-		global $wpdb;
-		$table_name = $wpdb->prefix . "qk_quoteme"; 
-		
-		
-	
 		if( $_POST )
 		{
 			if( $_POST['quote'] != '' AND $_POST['author'] != '' )
 			{
-				//global $wpdb;
-
-				//$table_name = $wpdb->prefix . "qk_quoteme"; 
+				//generate sample data
+				$current_time = current_time('mysql', $gmt = 0 );
+				$current_time_gmt = current_time('mysql', $gmt = 1 ); 
 				
-				$value = array( 'create_date' => time(), 'quote' => $_POST['quote'], 'author' => $_POST['author'] );
+				$quote_content = array( 'post_date' => $current_time, 'post_date_gmt' => $current_time_gmt, 'post_type' => QK_QUOTEME_POST_TYPE, 'post_content' => $_POST['quote'], 'quote_author' => $_POST['author'] );
 				
 				if( isset($_GET['edit']) )
 				{
-					$wpdb->update( $table_name,  $value, array( 'id' => $_GET['edit'] ));					
+					$quote_id = $_GET['edit'];	
+					$quote_content['ID'] = $quote_id;
+					wp_update_post( $quote_content );
+					//update post meta	
+					update_post_meta($quote_id, 'quote_author', $quote_content['quote_author']);		
 					$notice = "Quote was successfully updated";
 				}
 				else
 				{
-					$wpdb->insert( $table_name,  $value);
+					$quote_id = wp_insert_post( $quote_content );
+					add_post_meta($quote_id, 'quote_author', $quote_content['quote_author']);
 					$notice = "Quote was successfully added";
 				}
 
@@ -67,13 +67,10 @@
 		}
 		if( isset($_GET['edit']) )
 		{
-			//$qoute_data = qk_quoteme_data($_GET['edit'])
-			
 			$quote_id = $_GET['edit'];
-			$qoute_data = $wpdb->get_row("SELECT * FROM $table_name WHERE id = $quote_id");
-			
-			$quote = $qoute_data->quote;
-			$author = $qoute_data->author;
+			$qoute_data = get_post($quote_id);
+			$quote = $qoute_data->post_content;
+			$author = get_post_meta( $quote_id, "quote_author", true );
 		}
 	?>
 	

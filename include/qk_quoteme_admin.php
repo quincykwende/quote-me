@@ -55,34 +55,11 @@ function qk_quoteme_action(){
 	include( "qk_quoteme_add_view.php" );
 } 
 
-
-/**
- * Modify a quote
- *
- *
- */
-function qk_quoteme_data( $quote_id ){
-	
-	///global $wpdb;
-	//$table_name = $wpdb->prefix . "qk_quoteme"; 
-	
-//	$qoute_data = $wpdb->get_row("SELECT * FROM $table_name WHERE id = $quote_id");
-	
-	//return $qoute_data;
-}
-
 /**
  * Delete a quote
  *
  */
-function qk_quoteme_delete( $quote_id ){
-
-	global $wpdb;
-
-	$table_name = $wpdb->prefix . "qk_quoteme"; 
-	
-	$wpdb->delete( 	$table_name, array( 'id' => $quote_id ) );
-	
-	//echo $_SERVER['PHP_SELF'];
-	
+function qk_quoteme_delete( $quote_id ){	
+	wp_delete_post($quote_id);
+	delete_post_meta($quote_id, "quote_author");
 }

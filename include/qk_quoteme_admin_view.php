@@ -37,19 +37,19 @@
 				<td><?php echo $i; ?></td>
 				<td>
 					<span class= "qk-quotme-title">
-						<a href="#" title="<?php echo $quote->quote; ?>">
-						<?php echo $quote->quote; ?>
+						<a href="#" title="<?php echo $quote->post_content; ?>">
+						<?php echo $quote->post_content; ?>
 						</a>
 					</span>
 					<div class="row-actions">
 						<span class="edit">
-							<a href="<?php echo $_SERVER['PHP_SELF']; ?>?page=qk_quoteme_action&edit=<?php echo $quote->id; ?>" title="Edit this quote">Edit</a> | 
+							<a href="<?php echo $_SERVER['PHP_SELF']; ?>?page=qk_quoteme_action&edit=<?php echo $quote->ID; ?>" title="Edit this quote">Edit</a> | 
 						</span>
 						<span class="trash">
-							<a class="submitdelete" title="Delete this quote" href="<?php echo $_SERVER['PHP_SELF']; ?>?page=quote-me/include/qk_quoteme_admin.php&delete=<?php echo $quote->id; ?>">Delete</a> | 
+							<a class="submitdelete" title="Delete this quote" href="<?php echo $_SERVER['PHP_SELF']; ?>?page=quote-me/include/qk_quoteme_admin.php&delete=<?php echo $quote->ID; ?>">Delete</a> | 
 						</span>
 				</td>
-				<td><?php echo $quote->author; ?></td>
+				<td><?php echo get_post_meta( $quote->ID, "quote_author", true ); ?></td>
 		</tr>
 		<?php 
 			$i++;

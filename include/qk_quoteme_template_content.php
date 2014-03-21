@@ -5,8 +5,8 @@
 			<?php foreach( $quotes as $quote ): ?>
 			<div class="cbp-qtcontent">
 				<blockquote>
-					<p><?php echo $quote->quote; ?></p>
-					<footer><?php echo $quote->author; ?></footer>
+					<p><?php echo $quote->post_content; ?></p>
+					<footer><?php echo get_post_meta( $quote->ID, "quote_author", true ); ?></footer>
 				</blockquote>
 			</div>
 			<?php endforeach; ?>
